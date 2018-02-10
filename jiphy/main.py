@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# -*- coding:utf8 -*-
 """jiphy/main.py
 
 Defines the terminal interface for Jiphy
@@ -111,7 +112,7 @@ def main():
         if arguments.get('recursive', False):
             file_names = iter_source_code(file_names, arguments['in_ext'])
         for file_name in file_names:
-            with open(file_name) as input_file:
+            with open(file_name,encoding="utf8") as input_file:
                 input_code = input_file.read()
                 out_lang = arguments['out_lang']
                 if not out_lang:
